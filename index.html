@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>WattWise — Energy Waste Detective</title>
+
+    <style>
+        :root {
+            --site-primary: #F6B83F;
+            --site-secondary: #15345B;
+            --site-background: #071426;
+            --site-on-primary: #17243A;
+            --site-on-secondary: #F4F8FF;
+            --site-on-background: #F4F7FC;
+
+            --bg: #071426;
+            --panel: #0D1E34;
+            --panel2: #102640;
+            --line: #203954;
+            --muted: #8FA4BC;
+            --text: #F4F7FC;
+            --cyan: #4DD8D0;
+            --amber: #F6B83F;
+            --red: #FF687A;
+            --green: #5BD6A0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--site-background);
+            color: var(--site-on-background);
+            font-family: Inter, system-ui, sans-serif;
+            font-size: 14px;
+        }
+
+        button, input, select {
+            font: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        #app {
+            min-height: 100vh;
+            background: var(--site-background);
+            color: var(--site-on-background);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wrap {
+            position: relative;
+            max-width: 1600px;
+            margin: auto;
+            padding: 0 28px 36px;
+        }
+
+        .topbar {
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #1b314a;
+            gap: 18px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            font-weight: 800;
+            font-size: 18px;
+        }
+
+        .brandmark {
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+            background: var(--site-primary);
+            display: grid;
+            place-items: center;
+            color: #10233c;
+            font-weight: 900;
+        }
+
+        .nav {
+            display: flex;
+            gap: 6px;
+        }
+
+        .nav button {
+            border: 0;
+            background: transparent;
+            color: #91a5bb;
+            padding: 10px 13px;
+            border-radius: 9px;
+        }
+
+        .nav button.active,
+        .nav button:hover {
+            background: var(--site-secondary);
+            color: var(--site-on-secondary);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="wrap">
+
+            <header class="topbar">
+                <div class="brand">
+                    <div class="brandmark">W</div>
+                    <div>
+                        WATTWISE
+                        <small>ENERGY WASTE DETECTIVE</small>
+                    </div>
+                </div>
+
+                <nav class="nav">
+                    <button class="active" data-scroll="overview">Overview</button>
+                    <button data-scroll="alerts">Waste alerts</button>
+                    <button data-scroll="ranking">Investigation</button>
+                    <button data-scroll="savings">Savings & solar</button>
+                </nav>
+
+                <div class="righttop">
+                    <div class="live">READY FOR BILL UPLOAD</div>
+                    <div class="org">WATTWISE ANALYTICS</div>
+                </div>
+            </header>
